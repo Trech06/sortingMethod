@@ -6,7 +6,11 @@ public class Main {
         int[] sorted = new int[args.length];
         int tmp;
         for (int i=0; i < args.length; i++) {
+            try {
                 sorted[i] = Integer.parseInt(args[i]);
+            } catch (NumberFormatException e ){
+                System.out.println("Введенные строки исключены из проверки");
+            }
         }
         System.out.println(Arrays.toString(sorted));
         for (int i=0; i < sorted.length; i++) {
