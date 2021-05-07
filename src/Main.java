@@ -3,19 +3,21 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        int[] j = new int[args.length];
+        int[] sorted = new int[args.length];
         int tmp;
         for (int i=0; i < args.length; i++) {
-            j[i] = Integer.parseInt(args[i]);
+                sorted[i] = Integer.parseInt(args[i]);
         }
-        for (int i=0; i <= j.length+1; i++){
-            if (j[i] > j[i+1]){
-                tmp = j[i];
-                j[i] = j[i+1];
-                j[i+1] = tmp;
-
+        System.out.println(Arrays.toString(sorted));
+        for (int i=0; i < sorted.length; i++) {
+            for (int j = i+1; j < sorted.length; j++) {
+                if (sorted[i] > sorted[j]) {
+                    tmp = sorted[j];
+                    sorted[j] = sorted[i];
+                    sorted[i] = tmp;
+                }
             }
-            System.out.println(j[i]);
         }
+        System.out.println(Arrays.toString(sorted));
         }
 }
