@@ -37,7 +37,7 @@ public class Main {
         Collections.sort(secondArrayList, Collections.reverseOrder());
         System.out.println("ArrayListSortedReverse "+ secondArrayList.toString());
 
-        System.out.println("thirdArrayList " +thirdArrayList.toString());
+        System.out.println("thirdArrayList         " + thirdArrayList.toString());
 
         }
 }
